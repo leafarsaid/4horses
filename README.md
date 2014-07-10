@@ -1,4 +1,4 @@
-4hourses
+4horses
 ========
 
 Sistema de controle de informações para o comércio
