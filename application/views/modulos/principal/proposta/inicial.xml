@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dom title="Proposta">
+    <mainBox label="Proposta">
+        <box label="Dados para Pesquisa">
+            <hiddenBox style="i">
+                <periodPicker id="periodo" label="Período" />
+                <optionBox id="tipoPessoa" label="Tipo de Pessoa">
+                    <radioButton value="F">Física</radioButton>
+                    <radioButton value="J">Jurídica</radioButton>
+                </optionBox>
+                <inputText id="nome" label="Nome" style="iii" />
+                <inputText id="termo" label="No. Termo" style="ii" />
+                <listBox id="status" label="Status" style="ii" init="R">
+                    <option value="D" teste="oioi">Aguardando autorização descontos/cadastro</option>
+				    <option value="T">Aguardando autorização técnica</option>
+				    <option value="L">Aguardando liberação</option>
+				    <option value="R">Aguardando retorno</option>
+				    <option value="A">Andamento</option>
+				    <option value="S">Ativo-sem veículo</option>
+				    <option value="E">Cancelado</option>
+				    <option value="C">Concluído</option>
+				    <option value="N">Descontos/cadastro não autorizados</option>
+				    <option value="P">Pendente</option>
+				    <option value="O">Pendente aprovação taxa adesão</option>
+				    <option value="V">Pendente atualização de veículo</option>
+				    <option value="X">Taxa adesão não aprovada</option>
+				    <option value="M">Técnica não autorizado</option>
+                </listBox>
+                <listBox id="tipoContrato" label="Tipo de Contrato" style="iii">
+                    <![CDATA[
+                    SELECT
+                        tpcoid AS id
+                        ,tpcdescricao AS desc
+                    FROM
+                        tipo_contrato
+                    ORDER BY
+                        tpcdescricao
+                    ]]>
+                </listBox>
+                <listBox id="ufCliente" label="UF Cliente" style="ii" init="PR">
+                    <![CDATA[
+                    SELECT 
+                        estuf AS id
+                        ,estuf AS desc
+                    FROM 
+                        estado
+                    WHERE 
+                        estoid NOT IN (28,29,30)
+                    ORDER BY
+                        estuf
+                    ]]>
+                </listBox>
+                <listBox id="cidadeCliente" label="Cidade Cliente" style="ii" parent="ufCliente">
+                    <![CDATA[
+                    SELECT 
+                        cidoid AS id
+                        ,ciddescricao AS desc
+                    FROM 
+                        cidade
+                    WHERE 
+                        ciduf='!!parent!!'
+                    ORDER BY
+                        ciddescricao
+                    ]]>
+                </listBox>
+                <checkBox id="possuiAnexos">Possui anexo(s)</checkBox>
+            </hiddenBox>
+            <hiddenBox style="ii">
+                <listBox id="executivoVendas" label="Executivo de Vendas" style="ii">
+                    <![CDATA[
+                    SELECT
+                        funoid AS id
+                        ,funnome AS desc
+                    FROM
+                        funcionario
+                    WHERE
+	                    TRUE --(funcargo IN(SELECT sisexecutivo_vendas FROM sistema limit 1) OR funcargo IN(SELECT sisgerente_contas FROM sistema limit 1))
+	                    AND funexclusao IS NULL
+	                    AND fundemissao IS NULL
+                    ORDER BY funnome
+                    LIMIT 100
+                    ]]>
+                </listBox>
+                <listBox id="regiaoComercial" label="Região Comercial" style="ii">
+                    <![CDATA[
+                    SELECT
+                        regcoid AS id
+                        ,regcdescricao AS desc
+                    FROM
+                        regiao_comercial
+                    WHERE
+                        regcexclusao IS NULL
+                    ORDER BY
+                        regcdescricao
+                    ]]>
+                </listBox>
+                <listBox id="zonaComercial" label="Zona Comercial" style="ii">
+                    <![CDATA[
+                    SELECT
+                        rczoid AS id
+                        ,rczdescricao AS desc
+                    FROM
+                        regiao_comercial_zona
+                    WHERE
+                        rczexclusao IS NULL
+                    ORDER BY
+                        rczdescricao ASC
+                    ]]>
+                </listBox>
+                <inputText id="cpfcnpj" label="CPF/CNPJ" style="ii"></inputText>
+                <listBox id="classeContrato" label="Classe Contrato" style="ii">
+                    <![CDATA[
+                    SELECT
+                        eqcoid AS id
+                        ,eqcdescricao AS desc
+                    FROM
+                        equipamento_classe
+                    WHERE
+                        eqcinativo IS NULL
+                        AND eqcobroid > 0
+                    ORDER BY eqcdescricao
+                    ]]>
+                </listBox>
+                <listBox id="statusFinanceiro" label="Status Financeiro" style="ii">
+                    <![CDATA[
+                    SELECT 
+	                    psfoid AS id
+	                    ,psfdescricao AS desc
+                    FROM
+                        proposta_status_financeiro
+                    WHERE
+                        psfdt_exclusao IS NULL
+                    ]]>
+                </listBox>
+                <listBox id="classeCliente" label="Classe do Cliente" style="ii">
+                    <![CDATA[
+                    SELECT 
+                        1 id
+                        ,2 AS desc
+                    ]]>
+                </listBox>
+            </hiddenBox>
+	        <button target="pesquisar">Pesquisar</button>
+	        <button target="cadastrar">Cadastrar</button>
+        </box>
+    </mainBox>
+</dom>

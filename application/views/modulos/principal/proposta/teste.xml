@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dom title="Teste de Componentes">
+    <mainBox label="Título do Bloco">
+        <box label="Dados para Pesquisa">
+            <hiddenBox label="Título do Bloco Sem borda">
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="i"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="iii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+            </hiddenBox>
+            <hiddenBox>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+                <inputText id="tipoContrato1" label="Tipo de Contrato1" style="ii"></inputText>
+            </hiddenBox>
+        </box>
+    </mainBox>
+</dom>
