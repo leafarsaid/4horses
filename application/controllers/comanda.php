@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Modulo extends CI_Controller {
+class Comanda extends CI_Controller {
 
 	/**
 	 * Método construtor.
@@ -10,7 +10,7 @@ class Modulo extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 	
-		$this->load->model('Modulo_dao');		
+		$this->load->model('Comanda_dao');		
 		
 	}
 	
@@ -106,10 +106,10 @@ class Modulo extends CI_Controller {
 		$dados['combo1'] = $this->dom->listBox('Teste de combão','teste',3,'tipo1',$dataset);
 		$dados['service'] = 'teste: '.$_REQUEST['service'];
 		
-		$this->load->view('modulo',$dados);
+		$this->load->view('comanda',$dados);
 		
 	}
 }
 
-/* End of file modulo.php */
-/* Location: ./application/controllers/modulo.php */
+/* End of file comanda.php */
+/* Location: ./application/controllers/comanda.php */
