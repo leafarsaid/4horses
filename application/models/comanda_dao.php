@@ -21,8 +21,9 @@ class omanda_dao extends CI_Model {
      */
     public function listaPedido($condicoes) {
         $this->db->select('
-            c01_codigo,
         	c02_codigo,
+        	c02_descricao,
+        		
         	
         ', false);
         $this->db->from('t05_pedido_item');
