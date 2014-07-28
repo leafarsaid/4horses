@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://127.0.0.1/sistemaWeb/builder/public_html/';
+$config['base_url']	= 'http://127.0.0.1/MeuPedido/public_html/';
 
 /*
 |--------------------------------------------------------------------------

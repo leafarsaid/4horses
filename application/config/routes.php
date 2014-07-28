@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "modulo";
+$route['default_controller'] = "comanda";
 $route['404_override'] = '';
 
 

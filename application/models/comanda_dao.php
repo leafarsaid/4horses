@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class omanda_dao extends CI_Model {
+class Comanda_dao extends CI_Model {
 
     /**
      * Método construtor.
