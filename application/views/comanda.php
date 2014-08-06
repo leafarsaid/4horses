@@ -12,14 +12,14 @@
     	}
     	.teste{
     		background-color: red;
-    		min-height:100px;
-    		width: 100px; 
-    		height: 100px; 
-    		border-width: 10px;
+    		min-height:90px;
+    		width: 90px; 
+    		height: 90px; 
+    		border-width: 7px;
     		border-style:solid;
     		border-color: #ffffff;
     		display: inline-block;
-    		margin: 17px;
+    		margin: 18px;
     	}
     </style>
   </head>
@@ -52,53 +52,7 @@
     
     <div class="container">
 	    <div class="row-fluid">
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
-	    	<div class="teste"></div>
+	    	<img src="<?php echo base_url('bootstrap/css/bootstrap-responsive.css'); ?>">
 	    </div>
     </div>
   </body>
