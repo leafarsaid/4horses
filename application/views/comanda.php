@@ -51,7 +51,7 @@
     </div>    
     
     <div class="container">
-	    <div class="row-fluid">
+	    <div class="row-fluid"><!-- //-->
 	    	<img src="<?php echo base_url('bootstrap/css/bootstrap-responsive.css'); ?>">
 	    </div>
     </div>
